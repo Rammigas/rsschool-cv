@@ -12,7 +12,6 @@ body {
 .container {
 	max-width: 1440px;
 	margin: 0 auto;
-	border: 1px solid #000;
 }
 
 html {
@@ -50,6 +49,10 @@ html {
 
 .footer {
 	text-align: center;
+}
+
+.code-ex {
+	width: 47%;
 }
 
 /* font styles */
@@ -101,4 +104,21 @@ body {
 
 .link:hover {
 	color: #222222;
+}
+
+/* background */
+body {
+	background: linear-gradient(#403e3e57, #c3baba57)
+}
+
+.header {
+	background-color: #5049492c;
+}
+
+.code-ex {
+	background-color: #9a9a9a5e;
+}
+
+.footer {
+	background-color: #55545424;
 }
