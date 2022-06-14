@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	border: 1px solid #000;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.nav {
+	text-align: center;
+}
+
+.nav-link {
+	padding: 0 20px;
+	line-height: 50px;
+}
+
+.main-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section {
+	width: 50%;
+}
+
