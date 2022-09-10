@@ -40,13 +40,28 @@ body {
 	line-height: 120%;
 	font-size: 16px;
 	scroll-behavior: smooth;
+	color: #23262bc9;
+
+}
+
+// links-------------------------
+.main a {
+	color: #526d94;
+	transition: all 0.3s ease 0s;
+}
+
+.main a:hover {
+	font-weight: 600;
+	color: #2222b282;
+	text-shadow: 0px 0px 20px #00B296;
 }
 
 /* ............................................... */
 .wrapper {
 	margin: 0px auto;
 	min-height: 100%;
-	background-color: rgba(4, 4, 4, 0.242);
+	background: -webkit-linear-gradient(90deg, #ffffff, #ffffff, #d4caff);
+	background: linear-gradient(90deg, #ffffff, #ffffff, #d4caff);
 
 }
 
@@ -60,7 +75,7 @@ body {
 // logo-------------------------
 .header__logo img {
 	border-radius: 50%;
-	box-shadow: 0px 0px 10px 5px red;
+	box-shadow: 0px 0px 10px 5px #ab5441d1;
 
 }
 
@@ -86,7 +101,8 @@ body {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgb(52, 52, 52);
+	background: -webkit-linear-gradient(180deg, #5b4c5d, #cadce3);
+	background: linear-gradient(180deg, #5b4c5d, #cadce3);
 	z-index: 2;
 }
 
@@ -111,7 +127,12 @@ body {
 
 .header__link a {
 	text-transform: uppercase;
-	color: #000;
+	color: #5b4c5d;
+	transition: all 0.3s ease 0s;
+}
+
+.header__link a:hover {
+	text-shadow: 0px 0px 5px #ab5441d1;
 }
 
 // BURGER--------------------------
@@ -193,7 +214,8 @@ body {
 		width: 100%;
 		height: 100%;
 		overflow: auto;
-		background-color: rgb(107, 107, 107);
+		background: -webkit-linear-gradient(0deg, #5b4c5d, #cadce3);
+		background: linear-gradient(0deg, #5b4c5d, #cadce3);
 		border-radius: 20px;
 		transition: all 0.3s ease 0s;
 	}
@@ -227,7 +249,14 @@ body {
 	display: flex;
 	padding: 0px 0px 10px 0px;
 	margin-bottom: 50px;
-	background-color: rgba(70, 70, 70, 0.425);
+
+}
+
+.section-bg {
+	background: -webkit-linear-gradient(1deg, #526d94, #ffffff);
+	background: linear-gradient(1deg, #526d94, #ffffff);
+	border-radius: 20px;
+	box-shadow: 6px 12px 12px 5px rgba(184, 184, 184, 1);
 }
 
 .name {
@@ -240,6 +269,7 @@ body {
 	height: 400px;
 	background-size: cover;
 	border-radius: 20px;
+	box-shadow: 6px 12px 12px 5px rgba(184, 184, 184, 1);
 }
 
 h1 {
@@ -247,7 +277,8 @@ h1 {
 	font-weight: 700;
 	font-size: 70px;
 	line-height: 1;
-	padding: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 20px;
+	color: rgba(33, 32, 42, 0.837);
 }
 
 h2 {
@@ -256,6 +287,11 @@ h2 {
 	font-size: 40px;
 	line-height: 1;
 	padding: 0px 10px 0px 10px;
+	color: rgba(28, 27, 59, 0.749);
+}
+
+.preview__section h2 {
+	padding: 0px 10px 0px 20px;
 }
 
 .contacts__container {
@@ -274,10 +310,7 @@ h3 {
 .contacts {
 	margin: 0px 10px 0px 10px;
 	padding: 20px 10px 0px 10px;
-	border: 1px solid #000;
 	max-width: 400px;
-	background-color: rgb(123, 123, 123);
-
 }
 
 .contacts__list li {
@@ -303,6 +336,7 @@ h3 {
 }
 
 @media (max-width:767px) {
+
 	.photo {
 		width: 250px;
 		height: 300px;
@@ -315,8 +349,9 @@ h3 {
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-
+		margin: 0px 0px 20px 0px;
 	}
+
 
 	.contacts__list {
 		text-align: left;
@@ -328,6 +363,30 @@ h3 {
 
 	h3 {
 		font-size: 20px;
+	}
+}
+
+@media (max-width:479px) {
+	.contacts {
+		padding: 5px 10px 0px 10px
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	.contacts h3 {
+		margin: 0px 0px 5px 0px;
+	}
+
+	.contacts__list li {
+		font-size: 16px;
+		margin: 0px 0px 5px 0px;
+	}
+
+	.photo {
+		width: 200px;
+		height: 250px;
 	}
 }
 
@@ -361,24 +420,34 @@ h3 {
 	}
 }
 
+@media (max-width:479px) {
+	.info {
+		font-size: 15px;
+	}
+}
+
 // SECTION SKILLS ------------------------------------------------------
-.skills__section {
+.skills__section,
+.languages__section {
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
 }
 
-.skills__section h2 {
+.skills__section h2,
+.languages__section h2 {
 	margin-bottom: 30px;
 }
 
-.skills__list {
+.skills__list,
+.languages__list {
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
 }
 
-.skills__list li {
+.skills__list li,
+.languages__list li {
 	font-size: 25px;
 	display: flex;
 	align-items: center;
@@ -422,22 +491,28 @@ h3 {
 }
 
 @media (max-width:1199px) {
-	.skills__list li {
+
+	.skills__list li,
+	.languages__list li {
 		font-size: 20px;
 	}
 
 }
 
 @media (max-width:767px) {
-	.skills__section h2 {
+
+	.skills__section h2,
+	.languages__section h2 {
 		margin-bottom: 10px;
 	}
 
-	.skills__list {
+	.skills__list,
+	.languages__list {
 		flex-direction: column;
 	}
 
-	.skills__list li {
+	.skills__list li,
+	.languages__list li {
 		font-size: 15px;
 		margin-bottom: 10px;
 	}
@@ -447,6 +522,43 @@ h3 {
 .projects__section {
 	display: flex;
 	flex-direction: column;
+	padding: 10px;
+}
+
+.projects__section h2 {
+	margin: 0px 0px 30px 0px;
+}
+
+.momentum {
+	padding-left: 10px;
+}
+
+.momentum a {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 20px #00B296;
+	font-size: 30px;
+	transition: all 0.5s ease 0s;
+}
+
+.momentum p {
+	font-size: 20px;
+	margin: 10px 0px 0px 0px;
+}
+
+@media (max-width:767px) {
+	.projects__section h2 {
+		margin: 0px 0px 20px 0px;
+	}
+
+	.momentum a {
+		font-size: 25px;
+	}
+
+	.momentum p {
+		font-size: 15px;
+		margin: 10px 0px 0px 0px;
+	}
 }
 
 // SECTION EDUCATION----------------------------------------------------------------------
@@ -540,19 +652,52 @@ h3 {
 }
 
 @media (max-width:479px) {
-	.education__section{
+	.education__section {
 		padding: 10px 0px 0px 0px;
 	}
-	.education__section h2{
+
+	.education__section h2 {
 		margin: 0px 0px 10px 0px;
 	}
-   .education__list{
+
+	.education__list {
 		font-size: 15px;
 		margin-left: 5px;
 	}
+
+	.rsschool__list {
+		font-size: 10px;
+	}
+
 	.education__item::before,
 	.rsschool__item::before {
 		width: 20px;
 		height: 20px;
 	}
+}
+
+// Footer---------------------------------------------------------------------------
+.footer__container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: left;
+}
+
+.footer__icon {
+	margin: 0px 20px 10px 0px;
+}
+
+.github__footer {
+	width: 30px;
+	height: 30px;
+	background-image: url(../assets/svg/Github.svg);
+	background-size: cover;
+}
+
+.rsschool__footer {
+	width: 80px;
+	height: 30px;
+	background-image: url(../assets/svg/rs_school_js.svg);
+	background-size: cover;
 }
